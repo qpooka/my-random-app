@@ -1,0 +1,16 @@
+.__nav-container{
+    height : 8vh;
+    background-color: teal;
+}
+
+.__nav-container-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.__nav-container-links-link{
+    background-color: turquoise;
+    margin-right:3em;
+    margin-left: 2em;
+    margin-top: 1.2em;
+}
