@@ -1,0 +1,20 @@
+<div class="__slot-container">
+    <div class="__slot-container-money">
+        <div>money: {{money}}</div>
+        <div>coins: {{coins}}</div>
+        <button class="__slot-container-money-button" (click)="moneyForCoins(25)">25</button>
+        <button class="__slot-container-money-button" (click)="moneyForCoins(50)">50</button>
+        <button class="__slot-container-money-button" (click)="moneyForCoins(100)">100</button>
+    </div>
+    <div class="__slot-container-pokemon">
+        <img class="pokemon-image" src="{{pokemon[0]}}" onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png'"  alt="alternative" />
+        <img class="pokemon-image" src="{{pokemon[1]}}" onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png'"  alt="alternative" />
+        <img class="pokemon-image" src="{{pokemon[2]}}" onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png'"  alt="alternative" />
+    </div>
+    <div class="__slot-container-roll">
+        <button class="__slot-container-roll-button" (click)="roll()">roll</button>
+    </div>
+    <div class="__slot-container-results">
+
+    </div>
+</div>

@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // this could be used for, for example, the url for a local backend
+  // route: 'http://localhost:4200',
+  pokemonUrl: 'https://pokeapi.co/api/v2',
 };
 
 /*
