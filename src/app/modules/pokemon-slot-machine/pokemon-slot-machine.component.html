@@ -1,10 +1,13 @@
 <div class="__slot-container">
     <div class="__slot-container-money">
-        <div>money: {{money}}</div>
-        <div>coins: {{coins}}</div>
-        <button class="__slot-container-money-button" (click)="moneyForCoins(25)">25</button>
-        <button class="__slot-container-money-button" (click)="moneyForCoins(50)">50</button>
-        <button class="__slot-container-money-button" (click)="moneyForCoins(100)">100</button>
+        <div class="__slot-container-money-currency">money: {{money}}</div>
+        <div class="__slot-container-money-currency">coins: {{coins}}</div>
+        
+    </div>
+    <div class="__slot-container-buttons">
+        <button class="__slot-container-money-button" (click)="moneyForCoins(25)">25 coins</button>
+        <button class="__slot-container-money-button" (click)="moneyForCoins(50)">50 coins</button>
+        <button class="__slot-container-money-button" (click)="moneyForCoins(100)">100 coins</button>
     </div>
     <div class="__slot-container-pokemon">
         <img class="pokemon-image" src="{{pokemon[0]}}" onerror="this.src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png'"  alt="alternative" />
@@ -15,6 +18,6 @@
         <button class="__slot-container-roll-button" (click)="roll()">roll</button>
     </div>
     <div class="__slot-container-results">
-
+        <div class="__slot-container-results-num">{{result}}</div>
     </div>
 </div>

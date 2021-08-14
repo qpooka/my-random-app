@@ -1,9 +1,32 @@
 .__slot-container{
     display: flex;
     flex-direction: column;
+    margin-top:10vh;
+    //margin-left:50vh;
+    align-items: center;
 }
 
 .__slot-container-money{
     display: flex;
     flex-direction: row;
+}
+
+button.__slot-container-money-button{
+    margin-right: 2em;
+}
+
+button.__slot-container-roll-button{
+    border-radius: 5px;
+    font-size: 2.5em;
+    width:5em;
+}
+
+.__slot-container-pokemon{
+    margin-top: 6vh;
+    margin-bottom: 8vh;
+}
+
+img.pokemon-image{
+    height:20vh;
+    width: 20vh;
 }

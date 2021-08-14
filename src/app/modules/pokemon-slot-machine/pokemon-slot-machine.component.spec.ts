@@ -61,6 +61,7 @@ describe('PokemonSlotMachineComponent', () => {
 
   it('should change the number of coins when successfully called', () => {
     component.coins = 2;
+    
     spyOn(mockPokemonService, 'getOnePokemon').and.returnValue(of(mockPokemon));
     
     component.roll();

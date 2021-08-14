@@ -12,7 +12,9 @@ export class PokemonSlotMachineComponent implements OnInit {
   money: number = 1000;
   coins: number = 0;
   pokemonSelection: number[] = [722, 445, 245, 566, 399];
-  pokemon: String[] = ['', '', ''];
+  pokemon: String[] = ['a', 'b', 'c'];
+  pokemonId: number[] = [0, 0, 0];
+  result: String = '';
 
   // 722 > 445 > 245 > 566 > 399
   constructor(private pokemonService: PokemonService) { }
@@ -36,6 +38,10 @@ export class PokemonSlotMachineComponent implements OnInit {
         let pokeId: number = this.randomPokemonSelection();
         this.pokemonService.getOnePokemon(pokeId).subscribe((pokemon: any) => {
           this.pokemon[i] = pokemon.sprites.front_default;
+          this.pokemonId[i] = pokemon.id;
+          if(i == 2){
+            this.checkRoll();
+          }
         });
       }
     }
@@ -61,6 +67,33 @@ export class PokemonSlotMachineComponent implements OnInit {
       pokeId = 399;
     }
     return pokeId;
+  }
+
+  checkRoll(){
+    if((this.pokemonId[0] == this.pokemonId[1]) && (this.pokemon[0] == this.pokemon[2])){
+      if(this.pokemonId[0] == 722){
+        this.money += 1000;
+        this.result = '+1000';
+      }
+      else if(this.pokemonId[1] == 445){
+        this.money += 500;
+        this.result = '+500';
+      }
+      else if(this.pokemonId[0] == 245){
+        this.money += 200;
+        this.result = '+200';
+      }
+      else if(this.pokemonId[0] == 566){
+        this.money += 2;
+        this.result = '+2';
+      }
+      else{
+        this.result = 'too bad!';
+      }
+    }
+    else{
+      this.result = 'try again!'
+    }
   }
 
 }
