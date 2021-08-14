@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './modules/nav/nav.component';
 import { PokemonSlotMachineComponent } from './modules/pokemon-slot-machine/pokemon-slot-machine.component';
+import { PokemonGameComponent } from './modules/pokemon-game/pokemon-game.component';
+import { PokemonPartyComponent } from './modules/pokemon-party/pokemon-party.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    PokemonSlotMachineComponent
+    PokemonSlotMachineComponent,
+    PokemonGameComponent,
+    PokemonPartyComponent
   ],
   imports: [
     BrowserModule,
