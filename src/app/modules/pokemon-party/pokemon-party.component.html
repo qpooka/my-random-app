@@ -1,1 +1,15 @@
-<p>pokemon-party under construction!!</p>
+<div class="__party-container">
+    <div class="__party-container-pokemon" *ngIf="pokemonPics[0] != '' else elseblock">
+        <div *ngFor="let pokemonPic of pokemonPics">
+            <img *ngIf="pokemonPic!=''" class="pokemon-image" src={{pokemonPic}}/>
+        </div>
+        
+        <p>working!</p>
+    </div>
+    <ng-template #elseblock>
+        <div class="__party-container-empty">
+            You have no Pokemon!
+            <button (click)="chooseStarter()">click</button>
+       </div>
+    </ng-template>
+</div>

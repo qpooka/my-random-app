@@ -12,7 +12,7 @@ export class PokemonService {
   constructor(private httpClient: HttpClient) { }
 
   //method for particular pokemon
-  getOnePokemon(id: number): Observable<Pokemon>{
+  getOnePokemon(id: number): Observable<any>{
     return this.httpClient.get<any>(`${environment.pokemonUrl}/pokemon/${id}`);
   }
 

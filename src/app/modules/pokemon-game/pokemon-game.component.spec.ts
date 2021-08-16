@@ -22,4 +22,10 @@ describe('PokemonGameComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display/change message about the environment when called', () => {
+
+    component.move();
+    expect(component.envMessage).not.toEqual('You are in a forest');
+  });
 });

@@ -8,6 +8,7 @@ import { NavComponent } from './modules/nav/nav.component';
 import { PokemonSlotMachineComponent } from './modules/pokemon-slot-machine/pokemon-slot-machine.component';
 import { PokemonGameComponent } from './modules/pokemon-game/pokemon-game.component';
 import { PokemonPartyComponent } from './modules/pokemon-party/pokemon-party.component';
+import { PokemonStoreComponent } from './modules/pokemon-store/pokemon-store.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PokemonPartyComponent } from './modules/pokemon-party/pokemon-party.com
     NavComponent,
     PokemonSlotMachineComponent,
     PokemonGameComponent,
-    PokemonPartyComponent
+    PokemonPartyComponent,
+    PokemonStoreComponent
   ],
   imports: [
     BrowserModule,
