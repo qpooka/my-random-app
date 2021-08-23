@@ -54,7 +54,7 @@ describe('PokemonService', () => {
   // });
 
   it('should return a specific dummy item when endpoint is called', (done: DoneFn) => {
-    service.getOneItem().subscribe((item) => {
+    service.getOneItem(1).subscribe((item) => {
       expect(item).toEqual(mockItem);
       done();
     });

@@ -3,7 +3,7 @@ import { of } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon-model';
 import { PokemonService } from 'src/app/services/pokemon-service/pokemon.service';
 
-import { PokemonPartyComponent } from './pokemon-party.component';
+import { PokemonPartyComponent } from './pokemon-party-page.component';
 
 let mockPokemon: Pokemon;
 
