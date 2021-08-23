@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-store.component.scss']
 })
 export class PokemonStoreComponent implements OnInit {
+  money: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

@@ -10,6 +10,8 @@ export class NavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    sessionStorage.setItem('localMoney', '1000');
+    sessionStorage.setItem('localCoins', '0');
   }
 
 }

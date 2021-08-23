@@ -7,6 +7,7 @@ export const environment = {
   // this could be used for, for example, the url for a local backend
   // route: 'http://localhost:4200',
   pokemonUrl: 'https://pokeapi.co/api/v2',
+  trainerRoute: 'http://localhost:8080',
 };
 
 /*

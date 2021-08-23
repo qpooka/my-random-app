@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon-model';
-import { PokemonService } from 'src/app/services/pokemon.service';
+import { PokemonService } from 'src/app/services/pokemon-service/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-slot-machine',
@@ -20,12 +20,22 @@ export class PokemonSlotMachineComponent implements OnInit {
   constructor(private pokemonService: PokemonService) { }
 
   ngOnInit(): void {
+      let temp: string | null =  sessionStorage.getItem('localMoney');
+      if(temp != null){
+        this.money = parseInt(temp);
+      }
+      temp = sessionStorage.getItem('localCoins');
+      if(temp != null){
+        this.coins = parseInt(temp);
+      }
   }
 
   moneyForCoins(numberOfCoins: number){
     if(this.money >= numberOfCoins*4){
       this.money -= numberOfCoins*4;
+      sessionStorage.setItem('localMoney', this.money.toString());
       this.coins += numberOfCoins;
+      sessionStorage.setItem('localCoins', this.coins.toString());
     }
 
   }
@@ -33,6 +43,7 @@ export class PokemonSlotMachineComponent implements OnInit {
   roll(){
     if(this.coins > 1){
       this.coins -= 2;
+      sessionStorage.setItem('localCoins', this.coins.toString());
       
       for(let i: number = 0; i < 3; i++){
         let pokeId: number = this.randomPokemonSelection();
@@ -94,6 +105,7 @@ export class PokemonSlotMachineComponent implements OnInit {
     else{
       this.result = 'try again!'
     }
+    sessionStorage.setItem('localMoney', this.money.toString());
   }
 
 }

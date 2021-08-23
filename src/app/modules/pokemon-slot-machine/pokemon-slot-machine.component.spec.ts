@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { Pokemon } from 'src/app/models/pokemon-model';
-import { PokemonService } from 'src/app/services/pokemon.service';
+import { PokemonService } from 'src/app/services/pokemon-service/pokemon.service';
 
 import { PokemonSlotMachineComponent } from './pokemon-slot-machine.component';
 
@@ -24,7 +24,6 @@ describe('PokemonSlotMachineComponent', () => {
     .compileComponents();
     mockPokemonService = TestBed.inject(PokemonService);
     fixture = TestBed.createComponent(PokemonSlotMachineComponent);
-    
     component = fixture.componentInstance;
   });
 

@@ -4,7 +4,7 @@ import { PokemonGameComponent } from './modules/pokemon-game/pokemon-game.compon
 import { PokemonPartyComponent } from './modules/pokemon-party/pokemon-party.component';
 import { PokemonSlotMachineComponent } from './modules/pokemon-slot-machine/pokemon-slot-machine.component';
 import { PokemonStoreComponent } from './modules/pokemon-store/pokemon-store.component';
-import { PokemonService } from './services/pokemon.service';
+import { PokemonService } from './services/pokemon-service/pokemon.service';
 
 const routes: Routes = [
   {path: '', component: PokemonPartyComponent},
